@@ -1,0 +1,7 @@
+# Ignore original resume file
+RESUME F 3.pdf
+
+# Ignore OS-specific files
+Thumbs.db
+Desktop.ini
+.DS_Store
