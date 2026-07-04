@@ -1,5 +1,7 @@
 # Ignore original resume file
 RESUME F 3.pdf
+Vansh_Baraswal_Resume_*.pdf
+RESUME *.pdf
 
 # Ignore OS-specific files
 Thumbs.db

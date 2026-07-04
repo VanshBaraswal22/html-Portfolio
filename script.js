@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Typewriter Effect ---
     const typewriterElement = document.getElementById('typewriter');
-    const words = ["MERN Stack Developer", "AI/ML Enthusiast"];
+    const words = ["Full-Stack Developer", "AI/ML Developer", "DSA Enthusiast"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
