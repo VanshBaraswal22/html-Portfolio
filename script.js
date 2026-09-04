@@ -56,45 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Typewriter Effect ---
-    const typewriterElement = document.getElementById('typewriter');
-    const words = ["Full-Stack Developer", "MERN Stack Developer", "B.Tech IT Student"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 100;
-    
-    function type() {
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typeSpeed = 50; // faster deletion
-        } else {
-            typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typeSpeed = 100; // normal speed
-        }
-        
-        if (!isDeleting && charIndex === currentWord.length) {
-            // Finished typing word, wait before deleting
-            typeSpeed = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            // Finished deleting word, move to next
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typeSpeed = 500; // pause before typing next word
-        }
-        
-        setTimeout(type, typeSpeed);
-    }
-    
-    if (typewriterElement) {
-        setTimeout(type, 1000); // initial delay
-    }
-
     // --- Back to Top Button ---
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
